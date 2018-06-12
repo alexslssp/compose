@@ -1445,6 +1445,6 @@ def load_yaml(filename, encoding=None):
             # Sometimes the user's locale sets an encoding that doesn't match
             # the YAML files. Im such cases, retry once with the "default"
             # UTF-8 encoding
-            return load_yaml(filename, encoding='utf-8')
+            return load_yaml(filename, encoding='utf-8-sig')
         error_name = getattr(e, '__module__', '') + '.' + e.__class__.__name__
         raise ConfigurationError(u"{}: {}".format(error_name, e))
